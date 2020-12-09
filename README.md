@@ -1,3 +1,3 @@
-![](Pictures/main.png)
+![](Pictures/main.png) <!-- .element height="30%" width="30%" -->
 
-![](Pictures/card.png)
+![](Pictures/card.png) <!-- .element height="30%" width="30%" -->
