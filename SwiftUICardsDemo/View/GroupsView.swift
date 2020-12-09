@@ -37,10 +37,12 @@ struct GroupsView: View {
                 ) {
                     Section(header: title) {
                         ForEach(MockService.main.groups) { group in
-                            ItemButton(item: group, action: { selectedItem = $0 })
-                                .sheet(item: $selectedItem) { group in
-                                    CardsView(group: group)
-                                }
+                            ItemButton(item: group) {
+                                selectedItem = group
+                            }
+                            .sheet(item: $selectedItem) { group in
+                                CardsView(group: group)
+                            }
                         }
                     }
                 }
@@ -67,10 +69,10 @@ struct GroupsView: View {
 fileprivate struct ItemButton: View {
     
     let item: GroupItem
-    let action: (GroupItem) -> Void
-    
+    let action: () -> Void
+
     var body: some View {
-        Button(action: { action(item) }) {
+        Button(action: action) {
             HStack {
                 Spacer()
 
