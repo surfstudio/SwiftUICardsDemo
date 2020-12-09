@@ -1,3 +1,5 @@
-![](Pictures/main.png) <!-- .element height="30%" width="30%" -->
 
-![](Pictures/card.png) <!-- .element height="30%" width="30%" -->
+<img src="Pictures/main.png" alt="drawing" width="300"/>
+
+
+<img src="Pictures/card.png" alt="drawing" width="300"/>
