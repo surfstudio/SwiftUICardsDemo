@@ -59,7 +59,7 @@ struct GroupsView: View {
         Text("Крокодил")
             .foregroundColor(.white)
             .font(.largeTitle)
-            .fontWeight(.black)
+            .fontWeight(.bold)
             .padding(.bottom)
     }
 }
