@@ -74,7 +74,7 @@ struct CardsView: View {
         CardView(model: details)
             .padding(.vertical, 50)
             .padding(.horizontal, 20)
-            .modifier(CardAnimationModifire() {
+            .modifier(CardAnimationModifier() {
                 state.prepareForNextCard()
             })
     }
@@ -136,7 +136,7 @@ fileprivate struct LoadingView: View {
 
 // MARK: - Card animation modifire
 
-fileprivate struct CardAnimationModifire: ViewModifier {
+fileprivate struct CardAnimationModifier: ViewModifier {
     
     var showNextCard: (() -> ())?
     
