@@ -11,9 +11,9 @@ struct GroupItemDetails: Codable, Identifiable {
     
     enum CodingKeys: String, CodingKey {
         case id = "groupId"
-        case words = "items"
+        case items
     }
     
     let id: Int
-    let words: [String]
+    let items: [ItemDetails]
 }

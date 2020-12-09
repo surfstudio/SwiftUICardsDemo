@@ -104,6 +104,6 @@ fileprivate struct ItemButton: View {
 struct GroupsView_Previews: PreviewProvider {
     static var previews: some View {
         GroupsView()
-            .environment(\.sizeCategory, ContentSizeCategory.extraExtraExtraLarge)
+            .environment(\.sizeCategory, ContentSizeCategory.accessibilityExtraExtraLarge)
     }
 }

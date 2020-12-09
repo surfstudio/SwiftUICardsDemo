@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F96B6432580540200989B80 /* ItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F96B6422580540200989B80 /* ItemDetails.swift */; };
 		6FF8D74225771F3900447805 /* groupItems.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FF8D74025771F3900447805 /* groupItems.json */; };
 		6FF8D74325771F3900447805 /* groups.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FF8D74125771F3900447805 /* groups.json */; };
 		6FF8D776257BD63600447805 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF8D775257BD63600447805 /* BackgroundView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F96B6422580540200989B80 /* ItemDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetails.swift; sourceTree = "<group>"; };
 		6FF8D74025771F3900447805 /* groupItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = groupItems.json; sourceTree = "<group>"; };
 		6FF8D74125771F3900447805 /* groups.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = groups.json; sourceTree = "<group>"; };
 		6FF8D775257BD63600447805 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
@@ -136,8 +138,9 @@
 		A43F0311256E6F8800728B1A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A43F0312256E6F9200728B1A /* GroupItemDetails.swift */,
 				A43F0316256E6FF700728B1A /* GroupItem.swift */,
+				A43F0312256E6F9200728B1A /* GroupItemDetails.swift */,
+				6F96B6422580540200989B80 /* ItemDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				A43F02FA256E6DD900728B1A /* ContentView.swift in Sources */,
 				A43F0308256E6E6E00728B1A /* CardView.swift in Sources */,
 				6FF8D784257DAB4900447805 /* Character.swift in Sources */,
+				6F96B6432580540200989B80 /* ItemDetails.swift in Sources */,
 				A43F02F8256E6DD900728B1A /* SwiftUICardsDemoApp.swift in Sources */,
 				A43F030B256E6F3C00728B1A /* GroupsView.swift in Sources */,
 			);

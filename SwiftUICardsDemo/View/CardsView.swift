@@ -14,7 +14,7 @@ struct CardsView: View {
     fileprivate enum ViewState {
         case loading
         case empty
-        case content(cards: [String])
+        case content([ItemDetails])
     }
     
     // MARK: - Properties
@@ -70,8 +70,8 @@ struct CardsView: View {
     
     // MARK: - Views methods
     
-    func content(_ card: String) -> some View {
-        CardView(emoji: card, title: nil)
+    func content(_ details: ItemDetails) -> some View {
+        CardView(model: details)
             .padding(.vertical, 50)
             .padding(.horizontal, 20)
             .modifier(CardAnimationModifire() {
@@ -82,8 +82,8 @@ struct CardsView: View {
     // MARK: - Methods
     
     func reload() {
-        MockService.main.loadCards(forId: group.id) { cards in
-            withAnimation { state.update(forCards: cards) }
+        MockService.main.loadCards(forId: group.id) { items in
+            withAnimation { state.update(forItems: items) }
         }
     }
 
@@ -94,13 +94,13 @@ struct CardsView: View {
 fileprivate extension CardsView.ViewState {
     
     mutating func prepareForNextCard() {
-        if case let .content(cards) = self {
-            update(forCards: cards.dropLast())
+        if case let .content(items) = self {
+            update(forItems: items.dropLast())
         }
     }
     
-    mutating func update(forCards cards: [String]) {
-        self = cards.isEmpty ? .empty : .content(cards: cards)
+    mutating func update(forItems items: [ItemDetails]) {
+        self = items.isEmpty ? .empty : .content(items)
     }
     
 }

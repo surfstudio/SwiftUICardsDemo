@@ -11,8 +11,7 @@ struct CardView: View {
     
     // MARK: - Properties
     
-    let emoji: String
-    let title: String?
+    let model: ItemDetails
     
     // MARK: - View properties
 
@@ -21,15 +20,13 @@ struct CardView: View {
             Color.black.opacity(0.8)
             
             VStack {
-                if emoji.isSingleEmoji {
+                if let emoji = model.label, emoji.isSingleEmoji {
                     Text(emoji)
                         .font(.system(size: 150))
                 }
-                if let title = title {
-                    Text(title)
-                        .font(.title)
-                        .fontWeight(.bold)
-                }
+                Text(model.title)
+                    .font(.title)
+                    .fontWeight(.bold)
             }
             .foregroundColor(.white)
         }
@@ -45,7 +42,7 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(emoji: "🏵", title: "Слово")
+        CardView(model: ItemDetails(label: "🏵", title: "Слово"))
             .padding()
             .environment(\.sizeCategory, ContentSizeCategory.accessibilityExtraExtraExtraLarge)
     }

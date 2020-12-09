@@ -8,7 +8,6 @@
 import Foundation
 
 struct GroupItem: Codable, Identifiable {
-    
     let id: Int
     let label: String
     let title: String
